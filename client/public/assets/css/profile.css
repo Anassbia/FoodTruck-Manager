@@ -1,0 +1,186 @@
+:root {
+            --black: #000; /*created by Anas */
+            --white: #fff;
+            --ul-primary: #EB0029;
+            --ul-secondary: #FAA019;
+            --gradient-primary: linear-gradient(135deg, #EB0029 0%, #FAA019 100%);
+        }
+         
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        .profile-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: var(--white);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .profile-sidebar {
+            background: var(--ul-primary);
+            padding: 3rem 2rem;
+            color: var(--white);
+            position: relative;
+            min-height: 100%;
+        }
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            border: 4px solid var(--white);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.03);
+        }
+
+        .upload-overlay {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: var(--white);
+            border-radius: 50%;
+            padding: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-pills .nav-link {
+            color: var(--black);
+            padding: 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills .nav-link.active {
+            background: var(--ul-primary);
+            color: var(--white) !important;
+            transform: translateX(8px);
+        }
+
+        .section-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .password-strength {
+            height: 4px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .transaction-badge {
+            background: rgba(235, 0, 41, 0.1);
+            color: var(--ul-primary);
+            border-radius: 8px;
+            padding: 4px 12px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-control:focus {
+            border-color: var(--ul-primary);
+            box-shadow: 0 0 0 3px rgba(235, 0, 41, 0.2);
+        }
+
+        .btn-primary {
+            background: var(--ul-secondary);
+            border: none;
+            padding: 0.75rem 2rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+
+        .action .menu {
+            position: absolute;
+            top: 120px;
+            right: -10px;
+            border: #EB0029 2px solid;
+            padding: 10px 20px;
+            background: #fff;
+            width: 200px;
+            box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: 0.5s;
+            visibility: hidden;
+            opacity: 0;
+          }
+          
+          .action .menu.active {
+            top: 80px;
+            visibility: visible;
+            opacity: 1;
+          }
+          
+         /*  .action .menu::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            right: 28px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            transform: rotate(45deg);
+          } */
+          
+          
+          .action .menu ul li {
+            list-style: none;
+            padding: 16px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+          }
+          
+          .action .menu ul li a {
+            text-align: center; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            color: #555;
+            font-weight: 500;
+            transition: 0.5s;
+          }
+          .icon-drop{
+            margin-right: 10px; 
+            font-size: 25px; 
+            text-align: center;
+          }
+          
+          .action .menu ul li:hover img {
+            opacity: 1;
+          }
+          
+         
+          
+          .action .menu ul li:hover a {
+            color: #fd0202;
+            
+          }
+
+          input.invalid {
+            border: 1px solid red;
+        }
+          

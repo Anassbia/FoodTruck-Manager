@@ -1,0 +1,23 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Client;
+use App\Models\Menu;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Wishlist>
+ */
+class WishlistFactory extends Factory
+{
+   
+    public function definition(): array
+{
+    return [
+        'date' => $this->faker->date(),
+        'id_client' => Client::inRandomOrder()->value('id_client') ?? Client::factory(),
+        'id_menu' => Menu::inRandomOrder()->value('id_menu') ?? Menu::factory(),
+    ];
+}
+}
